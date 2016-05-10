@@ -39,6 +39,10 @@ public class CustomerTest {
         assertEquals("Test", testCustomer.getFirstName());
         assertEquals("Tester", testCustomer.getLastName());
         assertEquals("tester@tsl.com", testCustomer.getEmailAddress());
+        Customer secCustomer = new Customer("JJ", "Fish", "jjfish@tsl.com");
+        assertEquals("JJ", secCustomer.getFirstName());
+        assertEquals("Fish", secCustomer.getLastName());
+        assertEquals("jjfish@tsl.com", secCustomer.getEmailAddress());
     }
 
     @Test
@@ -89,6 +93,7 @@ public class CustomerTest {
 
         testCustomer.addBankAccount(testAccount1);
         testCustomer.addBankAccount(testAccount2);
+
 
         return testCustomer;
     }
