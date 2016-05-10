@@ -5,9 +5,35 @@
 <h1>Hello, {{.}}!</h1>
 {{/name}}
 
+<p>
+    <a href="/accountList?customerEmailAddress={{customer.emailAddress}}&bankID={{bank.bankID}}">Back to account list for {{customer.firstName}} {{customer.lastName}}</a>
+</p>
+
 <h2>Welcome to the account details page</h2>
 
 <h3>{{bankAccount.accountID}} has a balance of ${{bankAccount.accountBalance}}</h3>
+
+<h3>Enter amount to deposit</h3>
+<form action="/deposit" method="post">
+    <input type="text" name="bankID" value="{{bank.bankID}}" readonly/>
+    <input type="text" name="accountID" value="{{bankAccount.accountID}}" readonly/>
+    <input type="text" name="emailAddress" value="{{customer.emailAddress}}" readonly/>
+    <input type="text" placeholder="Enter Deposit Amount" name="amountToDeposit"/>
+
+    <button type="submit">Deposit</button>
+</form>
+
+<h3>Enter amount to withdraw</h3>
+<form action="/withdraw" method="post">
+    <input type="text" name="bankID" value="{{bank.bankID}}" readonly/>
+    <input type="text" name="accountID" value="{{bankAccount.accountID}}" readonly/>
+    <input type="text" name="emailAddress" value="{{customer.emailAddress}}" readonly/>
+    <input type="text" placeholder="Enter Withdrawal Amount" name="amountToWithdraw"/>
+
+    <button type="submit">Withdraw</button>
+</form>
+
+
 
 {{^name}}
 <h2>Enter your login information below please!</h2>

@@ -22,6 +22,14 @@
     {{/accountList}}
 </ul>
 
+<form action="/create-account" method="post">
+    <input type="text" name="bankID" value="{{bank.bankID}}" readonly/>
+    <input type="text" name="customerEmailAddress" value="{{customer.emailAddress}}" readonly/>
+    <input type="text" placeholder="Enter Account ID" name="accountID"/>
+    <input type="text" placeholder="Enter Inital Deposit Amount" name="initialDepositAmount"/>
+
+    <button type="submit">Create Account</button>
+</form>
 
 {{^name}}
 <h2>Enter your login information below please!</h2>

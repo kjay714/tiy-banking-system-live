@@ -21,6 +21,15 @@
     {{/customerList}}
 </ul>
 
+<form action="/create-customer" method="post">
+    <input type="text" name="bankID" value="{{bank.bankID}}" readonly/>
+    <input type="text" placeholder="Enter Customer First Name" name="firstName"/>
+    <input type="text" placeholder="Enter Customer Last Name" name="lastName"/>
+    <input type="text" name="emailAddress" placeholder="Enter Customer Email Address"/>
+
+    <button type="submit">Create Customer</button>
+</form>
+
 
 {{^name}}
 <h2>Enter your login information below please!</h2>

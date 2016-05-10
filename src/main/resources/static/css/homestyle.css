@@ -1,0 +1,111 @@
+html {
+  background-image: url(http://wallpaper.zone/thumb/1240557.jpg);
+}
+
+body {
+  margin: 0;
+}
+
+.welcomebanner {
+  background-color: lightgrey;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.welcomebanner h1 {
+  display: inline-block;
+  text-align: center;
+  color: darkred;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.navmenu {
+  display: inline-block;
+  max-width: 40%;
+}
+
+.navmenu ul {
+  display: inline-block;
+  list-style-type: none;
+  text-align: center;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.navoptions li {
+  display: inline;
+  border: 3px outset grey;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+
+  background-color: lightgrey;
+}
+
+.navoptions li a {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.contentBlock {
+  max-width: 60%;
+  margin-left: 30%;
+  margin-right: 30%;
+  width: 500px;
+  border: 6px ridge grey;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  background-color: lightgrey;
+}
+
+.contentBlock h2 {
+  color: darkred;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.banklist {
+  text-align: center;
+}
+
+.banklist ul {
+  display: inline-block;
+  list-style-type: none;
+  background-color: lightblue;
+  width: 200px;
+  max-height: 50%;
+  border: 3px double black;
+}
+
+.banklist li {
+  text-align: center;
+}
+
+.banklist li a {
+  text-decoration: none;
+  margin-right: 25%;
+  margin-left: 10%;
+}
+
+
+.loginview {
+  margin-top: 5px;
+  margin-left: 15%;
+  display: inline-block;
+  border: 3px double black;
+  background-color: lightgrey;
+  max-width: 200px;
+  height: 100px;
+}
+
+.loginview p {
+  text-align: center;
+}
+
+.loginview form {
+  text-align: center;
+}

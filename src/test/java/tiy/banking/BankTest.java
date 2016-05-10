@@ -112,8 +112,12 @@ public class BankTest {
         String secondBankID = mySecondBank.getBankID();
         mySecondBank.save();
 
+        assertNotEquals(myBankID, secondBankID);
+
         Bank retrievedBank1 = Bank.retrieve(myBankID);
         Bank retrievedBank2 = Bank.retrieve(secondBankID);
+
+        assertNotEquals(retrievedBank1.getBankID(), retrievedBank2.getBankID()); 
 
         assertEquals(myBank.getBankID(), retrievedBank1.getBankID());
         assertEquals(myBank.getBankName(), retrievedBank1.getBankName());

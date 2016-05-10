@@ -5,3 +5,4 @@ out
 lib
 .mvn
 target
+.DS_Store

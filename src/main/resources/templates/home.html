@@ -1,29 +1,56 @@
 <html>
+    <head>
+        <link href="css/homestyle.css" rel="stylesheet" type="text/css"/>
+    </head>
 <body>
 
-{{#name}}
-<h1>Hello, {{.}}!</h1>
-{{/name}}
-
-<h2>Please select a Bank ...</h2>
-
-<ul>
-    {{#bankList}}
-    {{#.}}
-    <li>
-        <a href="/customerList?bankID={{bankID}}">{{bankName}}</a>
-    </li>
-    {{/.}}
-    {{/bankList}}
-</ul>
+    <div class="welcomebanner">
+        {{#name}}
+        <h1>Hello, {{.}}!</h1>
+        {{/name}}
+        <div class="navmenu">
+            <ul class="navoptions">
+                <li><a href="/">Home</a></li>
+                <li><a href="/customerlist">Customer List</a></li>
+                <li><a href="/login">Login/Logout</a></li>
+            </ul>
+        </div>
 
 
-{{^name}}
-<h2>Enter your login information below please!</h2>
-<form action="/login" method="post">
-    <input type="text" placeholder="Enter your name" name="userName"/>
-    <button type="submit">Login</button>
-</form>
-{{/name}}
+        <div class="loginview">
+            {{^name}}
+            <h2>Enter your login information below please!</h2>
+            <form action="/login" method="post">
+                <input type="text" placeholder="Enter your name" name="userName"/>
+                <button type="submit">Login</button>
+            </form>
+            {{/name}}
+        </div>
+
+    </div>
+
+    <div class="contentBlock">
+        <h2>Please select a Bank ...</h2>
+            <div class="banklist">
+                <ul>
+                    {{#bankList}}
+                    {{#.}}
+                    <li>
+                        <a href="/customerList?bankID={{bankID}}">{{bankName}}</a>
+                    </li>
+                    {{/.}}
+                    {{/bankList}}
+                </ul>
+            </div>
+    </div>
+
+    <form action="/create-bank" method="post">
+        <input type="text" placeholder="Enter Bank Name" name="bankName"/>
+        <input type="text" placeholder="Enter Bank Address" name="bankAddress"/>
+
+        <button type="submit">Create Bank</button>
+    </form>
+
+
 </body>
 </html>
